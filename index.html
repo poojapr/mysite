@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+ <style>
+     * {margin:0; padding:0;}
+     * {box-sizing: border-box;}
+    
+
+     .banner-image {  width:100%;}
+
+        .navbar { position: absolute; top: 20px; left: 20px; display: flex; flex-direction: row; flex-wrap: wrap; z-index: 1; }
+        .navbar div a {color:cornsilk;}
+        .navbar div a:link {  text-decoration:none;}
+        .navbar div { margin: 10px;  font-size: 1.5em;   }
+        .navbar div a:hover { font-size: 1.2em; color:white;} 
+
+    
+    .midsect {display:grid; grid-template-columns: 1fr 1fr 1fr 1fr ; }
+
+    .first-col img { padding: 2%; padding-bottom: 0%;   border-radius: 50%; height:120px; margin-top: 15px; }
+    .first-col, .first-col div p {text-align: center;}
+
+    .large-col { grid-column: 2/span 3;  height: auto; }
+    .large-col .service {display:grid; grid-template-columns: 1fr 1fr 1fr; grid-template-areas: a b c;
+                             height: auto; justify-items: center;
+                        background-color:rgb(41, 16, 6); border-radius: 1%; padding:1%; margin:1%; 
+                       }
+
+    .large-col .service .serv-list { text-align: center;}
+    .service img {width:300px;border-radius: 2%; }
+    .serv-list {color:#f2f2f2; font-size: 1.5em;}
+    .service div  { color:#f2f2f2;}  
+    .service ul {margin:10px; margin-left:25px;}
+ 
+    .large-col .service .itemtable table {  padding:2%; border-radius: 2%; color: black;
+                                            border-collapse: collapse; background-color: cornsilk; width:250px;  }
+   
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    
+    td { padding: 5px; width:50%;}
+
+
+    @media only screen and (max-width: 600px) {
+    .large-col .service {display:grid; grid-template-columns: 1fr ; 
+                             height: auto; justify-items: center;
+                        background-color:rgb(41, 16, 6); border-radius: 1%; padding:2%; margin:1%; 
+                       }
+    }
+
+ 
+ </style>
+
+</head>
+<body>
+
+    <img class="banner-image" src="images/banner.jpeg" >
+          <div class="navbar"> 
+          
+          <div><a href="#home" > Home </a> </div>
+          <div><a href="#team" > Our team </a> </div>
+          <div><a href="#service" > Our services </a></div>
+          <div><a href="#service" > Contact </a></div>
+        </div>
+     
+        <!--midsection --->
+   
+    <div class="midsect"> 
+        <div class="first-col" >  <h2 id="team" style="margin-top:10px;"> Our team </h2>
+            <div> <img src="images/sanjiv.jpg" alt=""> <p> Sanjiv</p> <p> designer</p></div>
+            <div> <img src="images/roshan.jpg" alt=""> <p> Roshan</p> <p> developer</p></div>
+            <div> <img src="images/niraj.jpg" alt=""> <p> Niraj</p> <p> designer</p></div>
+            <div> <img src="images/piku.jpg" alt=""> <p> Priska</p> <p> smiler</p></div>
+
+        </div>
+
+        <div class="large-col" >
+            <div class= "service"> 
+                  <div class="serv-list" id="service"> Our services </div>
+                  <div></div>
+                  <div class="serv-list"> Price </div>
+      
+            </div>
+            
+            <div class= "service"> 
+                  <div> <img src="images/webdesign.jpg" alt=""> </div>
+                  <div> <h3> <u>Web page designer</u> </h3>
+                    <ul> <li>Content writer </li>
+                    <li>Audio/visual editor </li>
+                    <li>logo designer </li> 
+                    <li>database designer </li></ul> 
+                 </div>
+                  <div class="itemtable"> <table> 
+                    <tr>
+                        <td> Simple  page </td>
+                        <td> @ RS 1000</td>
+                   </tr>
+                                 
+                      <tr>
+                           <td> Medium multiple page </td>
+                           <td> @ RS 5000</td>
+                      </tr>  
+
+                      <tr>
+                            <td>Advance multiple page </td>
+                            <td> @ RS 10000 </td>
+                       </tr>     
+                  </table></div>
+            </div>
+
+            <div class="service">
+                  <div> <img src="images/webdev.jpg" alt=""> </div>
+                  <div> <h3> <u>Web page development</u> </h3>
+                            <ul> <li>Responsive development </li>
+                            <li>Animation  </li>
+                            <li>Full stack development </li> 
+                            <li>SEO </li></ul> 
+                  </div>
+                  <div class="itemtable"> <table> 
+                        <tr>
+                                <td> Simple development</td>
+                                <td> @ RS 2000</td>
+                           </tr>
+   
+                           <tr>
+                                   <td> Medium development</td>
+                                   <td> @ RS 5000</td>
+                           </tr>
+                           
+                              <tr>
+                                   <td> Advance development </td>
+                                   <td> @ RS 10000</td>
+                              </tr>   
+                  </table></div>  
+            </div>
+
+            <div class="service">
+                  <div> <img src="images/webhost.jpg" alt=""> </div>
+                  <div> <h3> <u>Web page hosting</u> </h3>
+                    <ul> <li>Content management  </li>
+                    <li>24 hour support </li>
+                    <li>full backup </li>
+                    <li>adaptive bandwidth </li></ul> 
+                  </div>    
+                  <div class="itemtable"> <table> 
+                        <tr>
+                             <td>  Limited share hosting</td>
+                             <td> @ RS 3000/yr</td>
+                        </tr>
+
+                        <tr>
+                                <td> Unlimited Shared hosting</td>
+                                <td> @ RS 5000/yr</td>
+                        </tr>
+                        
+                           <tr>
+                                <td> Dedicated hosting </td>
+                                <td> @ RS 10000/yr</td>
+                           </tr>   
+                        </table>
+                  </div>
+
+            </div>
+
+            <div class="service"> <div> Design by: student name </div> </div>
+        </div>
+
+    </div>    
+
+      
+
+    
+
+</body>
+</html>
